@@ -45,7 +45,7 @@ contract RobotShop {
         numberOfRobotsForSale++;
       }
     }
-    // 重新声明一个更小的数组，用于保存结果，减少消耗
+    // 上面数组的大小不是我们想要的，重新声明一个更准确的数组，用于返回结果
     uint[] memory forSale = new uint[](numberOfRobotsForSale);
     for(uint j = 0; j < numberOfRobotsForSale; j++) {
       forSale[j] = robotIds[j];
