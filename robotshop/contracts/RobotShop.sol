@@ -1,6 +1,5 @@
 pragma solidity ^0.4.21;
 // contract关键字用于声明一个智能合约，这里智能合约的名称要和文件名相同
-// 编写代码时我们先不解释语法，完成后我们统一对语法进行讲解
 contract RobotShop {
   // 声明一个存储机器人的结构体，里面包含一个机器人所有的属性字段
   struct Robot {
@@ -16,7 +15,6 @@ contract RobotShop {
   //记录机器人智能合约中机器人列表的总数下标
   uint robotCounter;
   //声明一个函数，在区块链上建立一笔出售机器人的记录
-  //函数中的传参以下划线开始，是一种约定，不是强制
   function sellRobot(string _name, string _description, uint256 _price) public {
     robotCounter++; //首先对总数加一
     //然后新建一个新的机器人记录在列表中
@@ -52,7 +50,7 @@ contract RobotShop {
     for(uint j = 0; j < numberOfRobotsForSale; j++) {
       forSale[j] = robotIds[j];
 }
-//返回最终的列表
+    //返回最终的列表
     return forSale;
   }
 }
